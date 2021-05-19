@@ -1,0 +1,12 @@
+name: "Machine Learning Course"
+output_dir: "docs"
+navbar:
+  title: "Machine Learning Course"
+  left:
+  - text: "Home"
+    href: index.html
+  - text: "Tarea 1"
+    href: tarea_01.html
+output:
+  html_document:
+    theme: cosmo
