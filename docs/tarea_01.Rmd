@@ -25,3 +25,7 @@ output: pdf_document
   (c) Compruebe que $Tr(\textbf{ABC}) = Tr(\textbf{CAB})$
   
 4. Si $\textbf{b}_1 = (1,0,0,0)$, $\textbf{b}_2$, $\textbf{b}_3 = (1,1,1,0)$, $\textbf{b}_4 = (1,1,1,1)$ y $\textbf{x} = a_1\textbf{b}_1 + a_2\textbf{b}_2 + a_3\textbf{b}_3 + a_4\textbf{b}_4$, calculelas coordenadas de $\textbf{x}$
+
+5. Muestre que el vector $[5,4]$ es combinación lineal de los vectores $[1,0]$ y $[1,1]$.
+
+6. ¿Es el vector $[1,0]$ combinación lineal de [$1,2]$ y $[-2,-4]$
