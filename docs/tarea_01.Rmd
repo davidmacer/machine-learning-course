@@ -1,31 +1,170 @@
 ---
 title: 'Tarea 01: Álgebra Lineal y Probabilidad'
 author: "David Martínez"
-date: "5/20/2021"
-output: pdf_document
 ---
+
+# Álgebra lineal
 
 1. Encuentre los valores para $x$ y $y$.
 
-  (a) $$(3,1) + (x,y) = (2,3)$$
-  (b) $$(a,1) + (x,y) = (-3,b)$$
-  (c) $$(a,b) + (x,y) = (c,d)$$
-  (d) $$(x,y) + (a,b) = (0,0)$$
+  (a) $(3,1) + (x,y) = (2,3)$
   
-2. Si $\textnf{P} = (2,-1)$$, $$\textbf{Q} = (-3,2)$$, $$\lambda = 2$$ y $$\mu = -1$$, compruébese que
+  $$(x,y) = (2,3) - (3,1)$$
+  $$(x,y) = (2-3,3-1)$$
+  $$(x,y) = (-1,2)$$
+  $$x = -1, \;\ y = 2$$
+  (b) $(a,1) + (x,y) = (-3,b)$
+  
+  $$(x,y) = (-3,b) - (a,1)$$
+  $$(x,y) = (-3+a,b+1)$$
+  $$x = -3+a, \;\ y = b+1$$
+  
+  (c) $(a,b) + (x,y) = (c,d)$
+  
+  $$(x,y) = (c,d) - (a,b)$$
+  $$(x,y) = (c-a,d-b)$$
+  $$x = c-a, \;\ y = d-b$$
+  
+  (d) $(x,y) + (a,b) = (0,0)$
+  
+  $$(x,y) = (0,0) - (a,b)$$
+  $$(x,y) = (0-a) - (0-b)$$
+  $$x = -a, \;\ y = -b$$
+  
+2. Si $\textbf{P} = (2,-1)$, $\textbf{Q} = (-3,2)$, $\lambda = 2$ y $\mu = -1$, compruébese que
 
   (a) $$\lambda(\textbf{P} + \textbf{Q}) = \lambda\textbf{P} + \lambda\textbf{Q}$$
-  (b) $$(\lambda + \mu)\textbf{P} = \lambda\textbf{P} + \lambda\textbf{Q}$$
+  
+  $$2((2,-1) + (-3,2)) = 2(2,-1) + 2(-3,2)$$
+  $$2(-1,1) = (4,-2) + (-6,4)$$
+  $$(-2,2) = (4-6,-2+4)$$
+  $$(-2,2) = (-2,2)$$
+  
+  (b) $$(\lambda + \mu)\textbf{P} = \lambda\textbf{P} + \mu\textbf{P}$$
+  
+  $$(2 - 1)(2,-1) = 2(2,-1) + (-1)(2,-1)$$
+  $$(1)(2,-1) = (4,-2) + (-2,1)$$
+  $$(2,-1) = (4-2,-2+1)$$
+  $$(2,-1) = (2,-1)$$
+  
   (c) $$(\lambda\mu)\textbf{P} = \lambda(\mu\textbf{P})$$
+  
+  $$((2)(-1))(2,-1) = 2(-1(2,-1))$$
+  $$(-2)(2,-1) = 2(-2,1)$$
+  $$(-4,2) = (-4,2)$$
   
 3. Si $A = \Bigg( \begin{matrix} 1 & 3 & 2 \\ 1 & 1 & 2 \\ 0 & 1 & 0 \end{matrix}\Bigg)$, $B = \Bigg( \begin{matrix} -1 & 2 & 1 \\ 0 & 0 & -2 \\ 1 & 1 & -1 \end{matrix}\Bigg)$ y $C = \Bigg( \begin{matrix} 1 & 0 & 1 \\ 1 & 1 & 0 \\ 0 & 1 & 1 \end{matrix}\Bigg)$
 
   (a) Compruebe las leyes distributivas y asociativas.
+  
+  **Propiedad distributiva**
+  
+  $$A(B+C) = AB + AC$$
+  $$\Bigg( \begin{matrix} 1 & 3 & 2 \\ 1 & 1 & 2 \\ 0 & 1 & 0 \end{matrix} \Bigg) \Bigg(\Bigg( \begin{matrix} -1 & 2 & 1 \\ 0 & 0 & -2 \\ 1 & 1 & -1 \end{matrix} \Bigg) + \Bigg( \begin{matrix} 1 & 0 & 1 \\ 1 & 1 & 0 \\ 0 & 1 & 1 \end{matrix}\Bigg) \Bigg) = \Bigg( \begin{matrix} 1 & 3 & 2 \\ 1 & 1 & 2 \\ 0 & 1 & 0 \end{matrix}\Bigg)\Bigg( \begin{matrix} -1 & 2 & 1 \\ 0 & 0 & -2 \\ 1 & 1 & -1 \end{matrix}\Bigg) + \Bigg( \begin{matrix} 1 & 3 & 2 \\ 1 & 1 & 2 \\ 0 & 1 & 0 \end{matrix}\Bigg) \Bigg( \begin{matrix} 1 & 0 & 1 \\ 1 & 1 & 0 \\ 0 & 1 & 1 \end{matrix}\Bigg)$$
+  $$\Bigg( \begin{matrix} 1 & 3 & 2 \\ 1 & 1 & 2 \\ 0 & 1 & 0 \end{matrix}\Bigg) \Bigg( \begin{matrix} 0 & 2 & 2 \\ 1 & 1 & -2 \\ 1 & 2 & 0 \end{matrix} \Bigg) = \Bigg( \begin{matrix} 1 & 4 & -7 \\ 1 & 4 & -3 \\ 0 & 0 & -2 \end{matrix}\Bigg) + \Bigg( \begin{matrix} 4 & 5 & 3 \\ 2 & 3 & 3 \\ 1 & 1 & 0 \end{matrix} \Bigg) $$
+  $$\Bigg( \begin{matrix} 5 & 9 & -4 \\ 3 & 7 & 0 \\ 1 & 1& -2 \end{matrix} \Bigg) = \Bigg( \begin{matrix} 5 & 9 & -4 \\ 3 & 7 & 0 \\ 1 & 1 & -2 \end{matrix} \Bigg)$$
+  
+  **Propiedad asociativa**
+  
+  $$(AB)C = A(BC)$$
+  $$AB = \Bigg( \begin{matrix} 1 & 3 & 2 \\ 1 & 1 & 2 \\ 0 & 1 & 0 \end{matrix} \Bigg) \Bigg( \begin{matrix} -1 & 2 & 1 \\ 0 & 0 & -2 \\ 1 & 1 & -1 \end{matrix} \Bigg) = \Bigg( \begin{matrix} 1 & 4 & -7 \\ 1 & 4 & -3 \\ 0 & 0 & -2 \end{matrix} \Bigg)$$
+  $$(AB)C = \Bigg( \begin{matrix} 1 & 4 & -7 \\ 1 & 4 & -3 \\ 0 & 0 & -2 \end{matrix} \Bigg) \Bigg( \begin{matrix} 1 & 0 & 1 \\ 1 & 1 & 0 \\ 0 & 1 & 1 \end{matrix} \Bigg) = \Bigg( \begin{matrix} 5 & -3 & -6 \\ 5 & 1 & -2 \\ 0 & -2 & -2 \end{matrix} \Bigg)$$
+  $$BC = \Bigg( \begin{matrix} -1 & 2 & 1 \\ 0 & 0 & -2 \\ 1 & 1 & -1 \end{matrix} \Bigg) \Bigg( \begin{matrix} 1 & 0 & 1 \\ 1 & 1 & 0 \\ 0 & 1 & 1 \end{matrix} \Bigg) = \Bigg( \begin{matrix} 1 & 3 & 0 \\ 0 & -2 & -2 \\ 2 & 0 & 0 \end{matrix} \Bigg)$$
+  $$A(BC) = \Bigg( \begin{matrix} 1 & 4 & -7 \\ 1 & 4 & -3 \\ 0 & 0 & -2 \end{matrix} \Bigg) \Bigg( \begin{matrix} 1 & 3 & 0 \\ 0 & -2 & -2 \\ 2 & 0 & 0 \end{matrix} \Bigg) = \Bigg( \begin{matrix} 5 & -3 & -6 \\ 5 & 1 & -2 \\ 0 & -2 & -2 \end{matrix} \Bigg) $$
+  $$\Bigg( \begin{matrix} 5 & -3 & -6 \\ 5 & 1 & -2 \\ 0 & -2 & -2 \end{matrix} \Bigg) = \Bigg( \begin{matrix} 5 & -3 & -6 \\ 5 & 1 & -2 \\ 0 & -2 & -2 \end{matrix} \Bigg)$$
+  
   (b) Si $\textbf{x} = [1,2,3]^T$, calcule $\textbf{Ax}$
+  
+  $$\textbf{Ax} = \Bigg( \begin{matrix} 1 & 3 & 2 \\ 1 & 1 & 2 \\ 0 & 1 & 0 \end{matrix} \Bigg) \Bigg( \begin{matrix} 1 \\ 2 \\ 3 \end{matrix} \Bigg) = \Bigg( \begin{matrix} 13 \\ 9 \\ 2 \end{matrix} \Bigg)$$
+  
   (c) Compruebe que $Tr(\textbf{ABC}) = Tr(\textbf{CAB})$
+  
+  $$ABC = \Bigg( \begin{matrix} 5 & -3 & -6 \\ 5 & 1 & -2 \\ 0 & -2 & -2 \end{matrix} \Bigg)$$
+  $$Tr(ABC) = Tr\Bigg( \begin{matrix} 5 & -3 & -6 \\ 5 & 1 & -2 \\ 0 & -2 & -2 \end{matrix} \Bigg) = 5 + 1 + (-2) = 4$$
+  $$CAB = \Bigg( \begin{matrix} 1 & 4 & -9 \\ 2 & 8 & -10 \\ 1 & 4 & -5 \end{matrix} \Bigg)$$
+  $$Tr(CAB) = Tr\Bigg( \begin{matrix} 1 & 4 & -9 \\ 2 & 8 & -10 \\ 1 & 4 & -5 \end{matrix} \Bigg) = 1 + 8 + (-5) = 4$$
   
 4. Si $\textbf{b}_1 = (1,0,0,0)$, $\textbf{b}_2$, $\textbf{b}_3 = (1,1,1,0)$, $\textbf{b}_4 = (1,1,1,1)$ y $\textbf{x} = a_1\textbf{b}_1 + a_2\textbf{b}_2 + a_3\textbf{b}_3 + a_4\textbf{b}_4$, calculelas coordenadas de $\textbf{x}$
 
+$$\textbf{x} = a_1(1,0,0,0) + a_2(1,1,0,0) + a_3(1,1,1,0) + a_4(1,1,1,1)$$
+$$\textbf{x} = (a_1,0,0,0) + (a_2,a_2,0,0) + (a_3,a_3,a_3,0) + (a_4,a_4,a_4,a_4)$$
+$$\textbf{x} = (a_1+a_2+a_3+a_4,a_2+a_3+a_4,a_3+a_4,a_4)$$
+$$x_1 = a_1 + a_2 + a_3 + a_4, \;\ x_2 = a_2 + a_3 + a_4, \;\ x_3 = a_3 + a_4, \;\ x_4 = a_4$$
+
 5. Muestre que el vector $[5,4]$ es combinación lineal de los vectores $[1,0]$ y $[1,1]$.
 
-6. ¿Es el vector $[1,0]$ combinación lineal de [$1,2]$ y $[-2,-4]$.
+$$x(1,0) + y(1,1) = (5,4)$$
+$$(x,0) + (y,y) = (5,4)$$
+$$x + y = 5$$
+$$0 + y = 4$$
+$$x + 4 = 5$$
+$$x = 5 - 4$$
+$$x = 1$$
+$$1(1,0) + 4(1,1) = (5,4)$$
+$$(1,0) + (4,4) = (5,4)$$
+$$(1+4) + (0+4) = (5,4)$$
+$$(5,4) = (5,4)$$
+
+6. ¿Es el vector $[1,0]$ combinación lineal de $[1,2]$ y $[-2,-4]$.
+
+$$x(1,2) + y(-2,4) = (1,0)$$
+$$(x,2x) + (-2y,-4y) = (1,0)$$
+$$x - 2y = 1$$
+$$2x - 4y = 0$$
+
+A la segunda ecuación le restamos dos veces la primera y tenemos 
+
+$$0 - 0  = -2$$
+
+lo cual es absurdo, por lo que concluimos que el vector $[1,0]$ no es combinación lineal de los vectores.
+
+---
+
+# Probabilidad
+
+1. Sean $X$ y $Y$ v.a. y sea $c$ una constante. Demuestre que
+
+  (a) $\textrm{Var}(cX) = c^2\textrm{Var}(X)$
+  
+  $$\textrm{Var}(cX) = E((cX)^2) - (E(cX))^2$$
+  $$E((cX)^2) - (E(cX))^2 = c^2(E(cX^2)) - c^2(E(X))^2$$
+  $$c^2(E(X^2)) - c^2(E(X)) = c^2\textrm{Var}(X)$$
+  (b) $\textrm{Var}(X + c) = \textrm{Var}(X)$
+  
+  $$\textrm{Var}(X + c) = E((X + c - E(X + c))^2)$$
+  $$E((X + c - E(X) - c)^2) = E((X - E(X))^2)$$
+  $$E((X + c - E(X) - c)^2) = \textrm{Var}(X)$$
+  
+  (c) $\textrm{Var}(X) = E(X^2) - E^2(X)$
+  
+  $$\textrm{Var}(X) = E((X - E(X))^2)$$
+  $$E((X-E(X))^2) = E(X^2 - 2XE(X) + E(X)^2)$$
+  $$E(X^2 - 2XE(X) + E(X)^2) = E(X^2) - 2E(X)E(X) + E(X)^2$$
+  $$E(X^2) - 2E(X)E(X) + E(X)^2 = E(X^2) - 2E(X)E(X) + E(X)^2$$
+  $$E(X^2) + E(X)^2 = E(X^2) + E(X)^2$$
+  
+  (d) Usando $X = Y$ muestre que $\textrm{Var}(X + Y)$ no es igual  a $\textrm{Var}(X) + \textrm{Var}(Y)$
+  
+2. Si $X$, $Y$, $W$ y $V$ son v.a. y $a$, $b$, $c$, $d$ constantes, demuestre que:
+
+  (a) $\textrm{Cov}(X,X) = \text{Var}(X)$
+  
+  $$\textrm{Cov}(X,X) = E((X - E(X))(X - E(X)))$$
+  $$E((X - E(X))(X - E(X))) = E(X)^2 - E(X)^2$$
+  
+  (b) $\textrm{Cov}(X,Y) = \text{Var}(Y,X)$
+  
+  Según [1](https://www.probabilitycourse.com/chapter5/5_3_1_covariance_correlation.php), una de las propiedades de la covarianza es la simetría
+  
+  (c) $\textrm{Cov}(aX,bX) = ab\text{Cov}(X,Y)$
+  
+  $$\textrm{Cov}(aX,bY) = E((aX)(bY)) - E(aX)E(bY)$$
+  $$E((aX)(bY)) - E(aX)E(bY) = abE(XY) - abE(X)E(Y)$$
+  $$abE(XY) - abE(X)E(Y) = ab\textrm{Cov}(X,Y)$$
+  
+  (d) $\textrm{Cov}(X + a,Y + b) = \text{Cov}(X,Y)$
+  
+  $$\textrm{Cov}(X + a, Y + b) = E((X + a)(Y + b)) - E(X + a)E(Y + b)$$
+  $$E((X + a)(Y + b)) - E(X + a)E(Y + b) = E(XY + aY + bX + ab) - (E(X)E(Y) + aE(Y) + bE(X) + E(ab))$$
+  $$E(XY + aY + bY + ab) - (E(X)E(Y) + aE(Y) + bE(X) + E(ab)) = E(XY) - E(X)E(Y)$$
+  $$E(XY) - E(X)E(Y) = \textrm{Cov}(X,Y)$$
